@@ -1,0 +1,6 @@
+{
+  "name": "YANKI: 2045'e 5 Dakika",
+  "description": "Gelecek Uzak Bir Felaket Değil; Bugün Attığın Adımların 2045'teki Yankısıdır. Sosyal Farkındalık ve Ekolojik Hesaplayıcı Platformu.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

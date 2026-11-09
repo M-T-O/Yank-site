@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>◈ YANKI: 2045'e 5 Dakika | Sosyal Farkındalık & Eylemlilik Platformu</title>
+    <meta name="description" content="Gelecek Uzak Bir Felaket Değil; Bugün Attığın Adımların 2045'teki Yankısıdır. Sosyal Farkındalık ve Ekolojik Hesaplayıcı Platformu." />
+    
+    <!-- OpenGraph & Social Cards -->
+    <meta property="og:title" content="◈ YANKI: 2045'e 5 Dakika | Sosyal Farkındalık & Eylemlilik Platformu" />
+    <meta property="og:description" content="Gelecek Uzak Bir Felaket Değil; Bugün Attığın Adımların 2045'teki Yankısıdır. Bireysel mikro kararların makro ekolojik dönüşüm gücü." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Background Grid -->
+    <div class="bg-grid-ambient" aria-hidden="true"></div>
+
+    <!-- Celebration Canvas for Confetti -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- Global Threshold Countdown Banner -->
+    <aside class="threshold-banner" aria-label="İklim Eşiği Sayacı">
+      <div class="container">
+        <div class="threshold-inner">
+          <div class="threshold-title">
+            <span class="mono-num" style="color: var(--accent-amber);">⚠️ TAHMİNİ EKOLOJİK EŞİK:</span>
+            <span>2045 Gezegensel Dönüm Noktasına Kalan Süre</span>
+          </div>
+          <div class="countdown-digits" id="countdown-digits">
+            <div class="time-slot">
+              <span class="time-val" id="count-days">0</span>
+              <span class="time-label">Gün</span>
+            </div>
+            <div class="time-slot">
+              <span class="time-val" id="count-hours">00</span>
+              <span class="time-label">Saat</span>
+            </div>
+            <div class="time-slot">
+              <span class="time-val" id="count-mins">00</span>
+              <span class="time-label">Dak</span>
+            </div>
+            <div class="time-slot">
+              <span class="time-val" id="count-secs">00</span>
+              <span class="time-label">Sn</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 1. NAVBAR / BAŞLIK BÖLÜMÜ -->
+    <header class="top-header">
+      <div class="container">
+        <div class="nav-row">
+          <!-- Zone 1: Brand Link -->
+          <a href="#" class="brand-link" aria-label="YANKI 2045 Ana Sayfa">
+            <span class="brand-icon">◈</span>
+            <span class="brand-title">YANKI 2045</span>
+            <span class="brand-tag">Sosyal Farkındalık</span>
+          </a>
+
+          <!-- Zone 2: Navigation Links -->
+          <nav class="nav-links" id="nav-links-menu" aria-label="Ana Menü">
+            <a href="#manifesto" class="nav-link">Manifesto</a>
+            <a href="#hesaplayici" class="nav-link">Karbon & Tüketim Hesaplayıcı</a>
+          </nav>
+
+          <!-- Zone 3: Primary Action & Live Indicator -->
+          <div class="header-actions">
+            <div class="header-countdown" title="2045 İklim Eşiğine Kalan Tahmini Süre">
+              <span class="pulse-dot"></span>
+              <span class="mono-num" id="header-live-countdown">Hesaplanıyor...</span>
+            </div>
+            <a href="#hesaplayici" class="btn-primary-sm">Ekolojik Ayak İzi ➔</a>
+            <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Menüyü Aç/Kapa">
+              ☰
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- 2. HERO / MANİFESTO BÖLÜMÜ -->
+      <section class="hero-section" id="manifesto">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-text-block">
+              <span class="hero-kicker">Antroposen Çağında Ekolojik Eylemlilik</span>
+              <h1 class="hero-title">
+                Gelecek Uzak Bir Felaket Değil; Bugün Attığın Adımların <span class="gradient-text">2045'teki Yankısıdır.</span>
+              </h1>
+              <p class="hero-description">
+                Bireysel mikro konfor kararlarının makro ekolojik çöküşe dönüşümünü engelleyecek bilinçli eylemlilik hareketi. Tek kullanımlık bir kahve bardağından seçtiğin ulaşım moduna kadar her gündelik hamle, 2045'in iklim haritasını inşa ediyor.
+              </p>
+              
+              <div class="hero-cta-group">
+                <a href="#hesaplayici" class="btn-primary">
+                  <span>Ekolojik Ayak İzini Hesapla</span>
+                  <span>➔</span>
+                </a>
+              </div>
+
+              <!-- Evidence proof bar -->
+              <div class="hero-proof">
+                <div class="proof-item">
+                  <span class="proof-num">1.5°C</span>
+                  <span class="proof-label">Geri Dönüşsüz İklim Eşiği</span>
+                </div>
+                <div class="proof-item">
+                  <span class="proof-num">424 ppm</span>
+                  <span class="proof-label">Atmosferik CO2 Yoğunluğu</span>
+                </div>
+                <div class="proof-item">
+                  <span class="proof-num">2045</span>
+                  <span class="proof-label">Kritik Dönüşüm Yılı</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hero Ambient Telemetry Card -->
+            <div class="hero-card">
+              <div class="card-hud-header">
+                <div class="hud-title">
+                  <span>◈</span>
+                  <span>GEZEGENSEL SINIRLAR TELEMETRİSİ</span>
+                </div>
+                <span class="hud-badge">CANLI MODELLEME</span>
+              </div>
+
+              <div class="hud-stream">
+                <div class="hud-stream-item">
+                  <div class="stream-info">
+                    <h4>Bireysel Ulaşım Tercihi</h4>
+                    <p>Fosil yakıtlı otomobil vs. Hafif Raylı Sistem</p>
+                  </div>
+                  <div class="stream-stat">
+                    <div class="stat-val-danger">+1.450 kg CO2</div>
+                    <span>Yıllık Antropojenik Yük</span>
+                  </div>
+                </div>
+
+                <div class="hud-stream-item">
+                  <div class="stream-info">
+                    <h4>Kahve & Ambalaj Atığı</h4>
+                    <p>Günde 2 tek kullanımlık karton bardak ve kapak</p>
+                  </div>
+                  <div class="stream-stat">
+                    <div class="stat-val-danger">+730 Adet</div>
+                    <span>Mikroplastik Kaynağı</span>
+                  </div>
+                </div>
+
+                <div class="hud-stream-item">
+                  <div class="stream-info">
+                    <h4>Onarım & Döngüsel Tekstil</h4>
+                    <p>Mahalle terzisinde giysi ömrünü uzatma</p>
+                  </div>
+                  <div class="stream-stat">
+                    <div class="stat-val-safe">-18.000 Litre</div>
+                    <span>Kurtarılan Sanal Su</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. ETKİLEŞİMLİ BİLEŞEN 1: 2045 GÜNDELİK FATURA VE ETKİ HESAPLAYICI -->
+      <section class="section-wrapper alt-bg" id="hesaplayici">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-badge">Etkileşimli Ekolojik Modül</span>
+            <h2 class="section-title">2045 Gündelik Fatura ve Etki Hesaplayıcı</h2>
+            <p class="section-subtext">
+              Gündelik 5 mikro konfor alışkanlığını seç; seçimlerinin 2045 yılındaki kümülatif karbon, su ve plastik atık faturasını bilimsel verilerle anında görüntüle.
+            </p>
+          </div>
+
+          <div class="calculator-layout">
+            <!-- Habit Choices Forms -->
+            <div class="calculator-habits">
+              <!-- Habit 1: Ulaşım -->
+              <div class="habit-card">
+                <div class="habit-header">
+                  <div class="habit-title-wrap">
+                    <span class="habit-num">01</span>
+                    <h3 class="habit-title">Ulaşım Tercihi</h3>
+                  </div>
+                </div>
+                <div class="toggle-group">
+                  <label class="toggle-option selected-destructive" for="t-car">
+                    <input type="radio" id="t-car" name="transport" value="a" checked>
+                    <div class="opt-head">
+                      <span class="opt-label" style="color: var(--accent-rose);">Seçenek A</span>
+                      <span class="opt-indicator"></span>
+                    </div>
+                    <div class="opt-text">Kişisel Otomobil / Taksi</div>
+                    <div class="opt-impact impact-bad">+1.450 kg CO2 / yıl</div>
+                  </label>
+
+                  <label class="toggle-option" for="t-metro">
+                    <input type="radio" id="t-metro" name="transport" value="b">
+                    <div class="opt-head">
+                      <span class="opt-label" style="color: var(--accent-emerald);">Seçenek B</span>
+                      <span class="opt-indicator"></span>
+                    </div>
+                    <div class="opt-text">Raylı Sistem / Metro / Yürüyüş</div>
+                    <div class="opt-impact impact-good">-1.100 kg CO2 / yıl</div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Habit 2: İçecek & Ambalaj -->
+              <div class="habit-card">
+                <div class="habit-header">
+                  <div class="habit-title-wrap">
+                    <span class="habit-num">02</span>
+                    <h3 class="habit-title">İçecek & Ambalaj Tüketimi</h3>
+                  </div>
+                </div>
+                <div class="toggle-group">
+                  <label class="toggle-option selected-destructive" for="c-disposable">
+                    <input type="radio" id="c-disposable" name="cup" value="a" checked>
+                    <div class="opt-head">
+                      <span class="opt-label" style="color: var(--accent-rose);">Seçenek A</span>
+                      <span class="opt-indicator"></span>
+                    </div>
+                    <div class="opt-text">Günde 2 Karton Bardak / Plastik Kapak</div>
+                    <div class="opt-impact impact-bad">+730 plastik kapak atığı / yıl</div>
+                  </label>
+
+                  <label class="toggle-option" for="c-thermos">
+                    <input type="radio" id="c-thermos" name="cup" value="b">
+                    <div class="opt-head">
+                      <span class="opt-label" style="color: var(--accent-emerald);">Seçenek B</span>
+                      <span class="opt-indicator"></span>
+                    </div>
+                    <div class="opt-text">Kişisel Çelik Termos / Matara</div>
+                    <div class="opt-impact impact-good">Sıfır ambalaj atığı</div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Habit 3: Öğle Yemeği -->
+              <div class="habit-card">
+                <div class="habit-header">
+                  <div class="habit-title-wrap">
+                    <span class="habit-num">03</span>
+                    <h3 class="habit-title">Öğle Yemeği & Beslenme</h3>
+                  </div>
+                </div>
+                <div class="toggle-group">
+                  <label class="toggle-option selected-destructive" for="l-fast">
+                    <input type="radio" id="l-fast" name="lunch" value="a" checked>
+                    <div class="opt-head">
+                      <span class="opt-label" style="color: var(--accent-rose);">Seçenek A</span>
+                      <span class="opt-indicator"></span>
+                    </div>
+                    <div class="opt-text">Plastik Kutulu Ekspres Paket Servis</div>
+                    <div class="opt-impact impact-bad">+365 tek kullanımlık kap / yıl</div>
+                  </label>
+
+                  <label class="toggle-option" for="l-home">
+                    <input type="radio" id="l-home" name="lunch" value="b">
+                    <div class="opt-head">
+                      <span class="opt-label" style="color: var(--accent-emerald);">Seçenek B</span>
+                      <span class="opt-indicator"></span>
+                    </div>
+                    <div class="opt-text">Evde Hazırlanan Yemek / Yerel Lokanta Porselen Tabak</div>
+                    <div class="opt-impact impact-good">Sıfır plastik atık, döngüsel beslenme</div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Habit 4: Tekstil & Giyim -->
+              <div class="habit-card">
+                <div class="habit-header">
+                  <div class="habit-title-wrap">
+                    <span class="habit-num">04</span>
+                    <h3 class="habit-title">Tekstil & Giyim Alışkanlığı</h3>
+                  </div>
+                </div>
+                <div class="toggle-group">
+                  <label class="toggle-option selected-destructive" for="f-fast">
+                    <input type="radio" id="f-fast" name="fashion" value="a" checked>
+                    <div class="opt-head">
+                      <span class="opt-label" style="color: var(--accent-rose);">Seçenek A</span>
+                      <span class="opt-indicator"></span>
+                    </div>
+                    <div class="opt-text">Ayda 2 Yeni Sentetik Hızlı Moda Giysisi</div>
+                    <div class="opt-impact impact-bad">+320 kg CO2 & 18.000 L Sanal Su</div>
+                  </label>
+
+                  <label class="toggle-option" for="f-repair">
+                    <input type="radio" id="f-repair" name="fashion" value="b">
+                    <div class="opt-head">
+                      <span class="opt-label" style="color: var(--accent-emerald);">Seçenek B</span>
+                      <span class="opt-indicator"></span>
+                    </div>
+                    <div class="opt-text">Mahalle Terzisinde Onarım & Uzun Ömürlü Kullanım</div>
+                    <div class="opt-impact impact-good">18.000 L Su Tasarrufu, Sıfır Atık</div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Habit 5: Gece Enerji & Ekran -->
+              <div class="habit-card">
+                <div class="habit-header">
+                  <div class="habit-title-wrap">
+                    <span class="habit-num">05</span>
+                    <h3 class="habit-title">Gece Enerji & Ekran Tüketimi</h3>
+                  </div>
+                </div>
+                <div class="toggle-group">
+                  <label class="toggle-option selected-destructive" for="e-ac">
+                    <input type="radio" id="e-ac" name="energy" value="a" checked>
+                    <div class="opt-head">
+                      <span class="opt-label" style="color: var(--accent-rose);">Seçenek A</span>
+                      <span class="opt-indicator"></span>
+                    </div>
+                    <div class="opt-text">Dondurucu Klima (18°C) + 4K Kesintisiz Video Akışı</div>
+                    <div class="opt-impact impact-bad">+680 kWh / yıl (+340 kg CO2)</div>
+                  </label>
+
+                  <label class="toggle-option" for="e-detox">
+                    <input type="radio" id="e-detox" name="energy" value="b">
+                    <div class="opt-head">
+                      <span class="opt-label" style="color: var(--accent-emerald);">Seçenek B</span>
+                      <span class="opt-indicator"></span>
+                    </div>
+                    <div class="opt-text">Doğal Havalandırma & Dijital Detoks / Kitap Okuma</div>
+                    <div class="opt-impact impact-good">Sıfır ek şebeke yükü, dingin zihin</div>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sticky Dynamic Results Panel -->
+            <div class="calculator-results">
+              <div class="results-header">
+                <h3>2045 EKOLOJİK BİLANÇO</h3>
+                <span class="mono-num" style="font-size: 0.75rem; color: var(--text-cyan);">ANLIK ANALİZ</span>
+              </div>
+
+              <div class="score-circle-wrap">
+                <div class="score-dial">
+                  <svg viewBox="0 0 160 160">
+                    <circle class="dial-bg" cx="80" cy="80" r="65"></circle>
+                    <circle class="dial-progress" id="dial-progress-circle" cx="80" cy="80" r="65"></circle>
+                  </svg>
+                  <div class="dial-center">
+                    <div class="dial-value mono-num" id="res-score" data-val="0">0</div>
+                    <div class="dial-unit">İKLİM SKORU</div>
+                  </div>
+                </div>
+                <div class="score-evaluation eval-critical" id="res-eval-tag">
+                  Kritik Ekolojik İflas (Plastik Şafak)
+                </div>
+              </div>
+
+              <div class="metrics-breakdown">
+                <div class="metric-row">
+                  <span class="m-label">
+                    <span>🔥</span>
+                    <span>Yıllık Karbon Ayak İzi</span>
+                  </span>
+                  <span class="m-value mono-num" id="res-co2" data-val="2275">2.275 kg</span>
+                </div>
+
+                <div class="metric-row">
+                  <span class="m-label">
+                    <span>🗑️</span>
+                    <span>Yıllık Katı / Plastik Atık</span>
+                  </span>
+                  <span class="m-value mono-num" id="res-waste" data-val="1119">1.119 adet</span>
+                </div>
+
+                <div class="metric-row">
+                  <span class="m-label">
+                    <span>💧</span>
+                    <span>Tüketilen Sanal Su</span>
+                  </span>
+                  <span class="m-value mono-num" id="res-water" data-val="26200">26.200 L</span>
+                </div>
+              </div>
+
+              <div class="reset-btn-wrap">
+                <button class="btn-ghost" id="calc-reset-btn" type="button">
+                  🌿 Maksimum Onarım Senaryosunu Gör (Simbiyoz)
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 7. FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Col 1: Brand & Purpose -->
+          <div class="footer-brand">
+            <h4>◈ YANKI: 2045'e 5 Dakika</h4>
+            <p>
+              Bireysel mikro konfor kararlarının makro ekolojik çöküşe dönüşümünü engelleyecek sosyal farkındalık, kurgusal tasarım ve eylemlilik platformu.
+            </p>
+          </div>
+
+          <!-- Col 2: Navigation -->
+          <div class="footer-col">
+            <h5>Gezinme</h5>
+            <ul>
+              <li><a href="#manifesto">Proje Manifestosu</a></li>
+              <li><a href="#hesaplayici">2045 Gündelik Fatura Hesaplayıcı</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            © 2026 YANKI: 2045'e 5 Dakika. Açık Kaynak MIT Lisansı ile sunulmuştur.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
